@@ -6,6 +6,7 @@ const API_URL = 'https://api.giphy.com/v1/gifs/search';
 const API_Key = 'B3uOz9CcphAPhGkThscYjcILNviRvLxn';
 
 function displayResult(responseObject) {
+    document.getElementById('pic').innerText='';
     for (item of responseObject.data) {
         let imgElement = document.createElement('img');
         imgElement.src = item.images.downsized_medium.url;
